@@ -68,7 +68,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let artist = [
             "id": id,
             "ArtistName": newName,
-            "AsrtistGenre": newGenre
+            "ArtistGenre": newGenre
         ]
         refArtists.child(id).setValue(artist)
         labelMessage.text = "Artist Updated"
