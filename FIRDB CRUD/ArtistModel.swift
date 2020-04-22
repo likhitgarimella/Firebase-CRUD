@@ -20,4 +20,4 @@ class ArtistModel {
         self.genre = genre
     }
     
-}
+}   // #24

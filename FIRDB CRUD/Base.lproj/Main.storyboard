@@ -81,9 +81,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4t-Y7-Poc">
-                                                    <rect key="frame" x="349.66666666666669" y="29" width="44.333333333333314" height="22"/>
+                                                    <rect key="frame" x="185" y="29" width="44.333333333333343" height="22"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="22" id="b6L-io-emh"/>
+                                                        <constraint firstAttribute="height" constant="22" id="y8t-xI-ZNY"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -92,7 +92,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMB-S8-veO">
                                                     <rect key="frame" x="20.000000000000004" y="29" width="44.333333333333343" height="22"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="22" id="Xmh-MA-6gB"/>
+                                                        <constraint firstAttribute="height" constant="22" id="DDV-RC-56k"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -100,13 +100,10 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="kMB-S8-veO" secondAttribute="bottom" constant="18" id="6BW-Bb-FWB"/>
-                                                <constraint firstItem="kMB-S8-veO" firstAttribute="top" secondItem="OrK-ap-OQC" secondAttribute="topMargin" constant="18" id="C6H-NE-0vZ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="U4t-Y7-Poc" secondAttribute="bottom" constant="18" id="GEP-MY-gq1"/>
-                                                <constraint firstItem="U4t-Y7-Poc" firstAttribute="trailing" secondItem="OrK-ap-OQC" secondAttribute="trailingMargin" id="JUF-Ov-ybT"/>
-                                                <constraint firstItem="U4t-Y7-Poc" firstAttribute="top" secondItem="OrK-ap-OQC" secondAttribute="topMargin" constant="18" id="pJd-Aw-prk"/>
-                                                <constraint firstItem="kMB-S8-veO" firstAttribute="leading" secondItem="OrK-ap-OQC" secondAttribute="leadingMargin" id="uwL-jR-1Y0"/>
-                                                <constraint firstItem="U4t-Y7-Poc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kMB-S8-veO" secondAttribute="trailing" constant="8" symbolic="YES" id="zx9-CY-pxN"/>
+                                                <constraint firstItem="kMB-S8-veO" firstAttribute="leading" secondItem="OrK-ap-OQC" secondAttribute="leadingMargin" id="Jqa-1f-bOm"/>
+                                                <constraint firstItem="kMB-S8-veO" firstAttribute="centerY" secondItem="OrK-ap-OQC" secondAttribute="centerY" id="ntv-dc-YUW"/>
+                                                <constraint firstItem="U4t-Y7-Poc" firstAttribute="centerY" secondItem="OrK-ap-OQC" secondAttribute="centerY" id="pHp-9K-mZr"/>
+                                                <constraint firstItem="U4t-Y7-Poc" firstAttribute="centerX" secondItem="OrK-ap-OQC" secondAttribute="centerX" id="wxP-8V-Ic4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

@@ -34,6 +34,47 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let artist = artistsList[indexPath.row]
+        let alertController = UIAlertController(title: artist.name, message: "Update Values", preferredStyle: .alert)
+        
+        let updateAction = UIAlertAction(title: "Update", style: .default) { (_) in
+            let id = artist.id
+            let newName = alertController.textFields?[0].text
+            let newGenre = alertController.textFields?[1].text
+            self.updateArtist(id: id!, newName: newName!, newGenre: newGenre!)
+        }
+        
+        let deleteAction = UIAlertAction(title: "Delete", style: .default) { (_) in
+            
+        }
+        
+        alertController.addAction(updateAction)
+        alertController.addAction(deleteAction)
+        present(alertController, animated: true, completion: nil)
+        
+        alertController.addTextField{(textField) in
+            textField.text = artist.name
+        }
+        alertController.addTextField{(textField) in
+            textField.text = artist.genre
+        }
+        
+    }
+    
+    func updateArtist(id: String, newName: String, newGenre: String) {
+        
+        let artist = [
+            "id": id,
+            "ArtistName": newName,
+            "AsrtistGenre": newGenre
+        ]
+        refArtists.child(id).setValue(artist)
+        labelMessage.text = "Artist Updated"
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -87,4 +128,4 @@ extension UIViewController {
         view.endEditing(true)
     }
     
-}
+}   // #132
