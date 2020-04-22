@@ -1,0 +1,6 @@
+framework module Pods_FIRDB_CRUD {
+  umbrella header "Pods-FIRDB CRUD-umbrella.h"
+
+  export *
+  module * { export * }
+}
