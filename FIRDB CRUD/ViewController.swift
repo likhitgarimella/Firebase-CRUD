@@ -40,13 +40,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let alertController = UIAlertController(title: artist.name, message: "Update Values", preferredStyle: .alert)
         
         let updateAction = UIAlertAction(title: "Update", style: .default) { (_) in
+            
             let id = artist.id
             let newName = alertController.textFields?[0].text
             let newGenre = alertController.textFields?[1].text
             self.updateArtist(id: id!, newName: newName!, newGenre: newGenre!)
+            
         }
         
         let deleteAction = UIAlertAction(title: "Delete", style: .default) { (_) in
+            
+            self.deleteArtist(id: artist.id!)
             
         }
         
@@ -72,6 +76,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         ]
         refArtists.child(id).setValue(artist)
         labelMessage.text = "Artist Updated"
+        
+    }
+    
+    func deleteArtist(id: String) {
+        
+        refArtists.child(id).setValue(nil)
         
     }
     
